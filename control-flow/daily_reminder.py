@@ -19,27 +19,25 @@ def main():
         print("Please answer with yes or no.")
         time_bound = input("Is it time-bound? (yes/no): ").lower()
     
-    print("\nReminder:", end=" ")
-    
     # Process based on priority using match case
     match priority:
         case 'high':
             if time_bound == 'yes':
-                print(f"'{task}' is a high priority task that requires immediate attention today!")
+                print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
             else:
-                print(f"'{task}' is a high priority task. You should focus on this soon.")
+                print(f"Reminder: '{task}' is a high priority task. You should focus on this soon.")
         
         case 'medium':
             if time_bound == 'yes':
-                print(f"'{task}' is a medium priority task with a deadline. Try to complete it today.")
+                print(f"Reminder: '{task}' is a medium priority task with a deadline. Try to complete it today.")
             else:
-                print(f"'{task}' is a medium priority task. Schedule time for it this week.")
+                print(f"Reminder: '{task}' is a medium priority task. Schedule time for it this week.")
         
         case 'low':
             if time_bound == 'yes':
-                print(f"'{task}' is a low priority task but has a deadline. Complete it when possible.")
+                print(f"Reminder: '{task}' is a low priority task but has a deadline. Complete it when possible.")
             else:
-                print(f"Note: '{task}' is a low priority task. Consider completing it when you have free time.")
+                print(f"Reminder: '{task}' is a low priority task. Consider completing it when you have free time.")
 
 if __name__ == "__main__":
     main()
