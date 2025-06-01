@@ -15,8 +15,8 @@ match priority:
         reminder = f"Note: '{task}' has an undefined priority."
 
 if time_bound == "yes" and priority in ("high", "medium"):
-    reminder += " that requires immediate attention today!"
+    reminder = reminder.rstrip('.') + " that requires immediate attention today!"
 elif time_bound == "no" and priority == "low":
-    reminder += ". Consider completing it when you have free time."
+    reminder = reminder.rstrip('.') + ". Consider completing it when you have free time."
 
 print(reminder)
